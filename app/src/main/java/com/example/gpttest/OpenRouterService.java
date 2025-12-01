@@ -9,10 +9,9 @@ import retrofit2.http.POST;
 
 public interface OpenRouterService {
     @Headers({
-            "Authorization: Bearer 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",  // ← ВСТАВЬТЕ TOKEN!
-            "Content-Type: application/json",
-            "HTTP-Referer: http://localhost",  // Опционально: ваш домен
-            "X-Title: Android Chat"  // Опционально
+            "Authorization: Bearer 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",
+            "HTTP-Referer: http://localhost",
+            "X-Title: Android Chat"
     })
     @POST("api/v1/chat/completions")
     Call<OpenRouterResponse> chat(@Body Map<String, Object> body);
